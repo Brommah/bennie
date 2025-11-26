@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEN // NETWORK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              void: '#000000',
+              acid: '#84cc16',
+              signal: '#F4F4F5',
+              interference: '#3F3F46',
+              zinc: {
+                850: '#1f1f22',
+                900: '#18181b',
+                950: '#09090b',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scan': 'scan 8s linear infinite',
+              'marquee': 'marquee 20s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              scan: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #F4F4F5;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3F3F46;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #84cc16;
+      }
+
+      .text-outline {
+        -webkit-text-stroke: 1px #F4F4F5;
+        color: transparent;
+      }
+      
+      .text-outline-acid {
+        -webkit-text-stroke: 1px #84cc16;
+        color: transparent;
+      }
+
+      /* Much Greener Gradient - Updated to Pantone English Green tones */
+      .text-gradient-acid {
+        background: linear-gradient(180deg, #84cc16 0%, #4ade80 40%, #1B4D3E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 30px rgba(27, 77, 62, 0.4);
+      }
+
+      /* Red Gradient for Warnings */
+      .text-gradient-red {
+        background: linear-gradient(180deg, #ef4444 0%, #b91c1c 40%, #7f1d1d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 30px rgba(127, 29, 29, 0.4);
+      }
+
+      ::selection {
+        background: #84cc16;
+        color: #000000;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
