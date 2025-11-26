@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      // For GitHub Pages: set to '/bennie/' for https://brommah.github.io/bennie/
+      // For custom domain: set to '/'
+      base: process.env.GITHUB_PAGES ? '/bennie/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
